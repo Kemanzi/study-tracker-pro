@@ -186,7 +186,10 @@ const SettingsSidebar = ({ isOpen, onClose }) => {
 
                 <div className="settings-section">
                     <h3>♻ Recycle Bin</h3>
-                    <button className="settings-btn" onClick={() => navigate("/recyclebin")}>
+                    <button className="settings-btn" onClick={() => {
+                        onClose();
+                        navigate("/recyclebin")
+                    }}>
                         Open Recycle Bin
                     </button>
                 </div>
