@@ -175,7 +175,7 @@ const Sessions = () => {
                     {/* Text search */}
                     <input
                         type="text"
-                        placeholder="Search sessions, notes, tags..."
+                        placeholder="Search sessions..."
                         value={filters.search}
                         onChange={(e) => updateFilter("search", e.target.value)}
                         className="search-input"
