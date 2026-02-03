@@ -1525,3 +1525,32 @@ body {
     transform: translate(-50%, 0);
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .dashboard-top-row,
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-cell {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .create-session,
+  .edit-session,
+  .hero-card {
+    padding: 20px;
+  }
+
+  .settings-sidebar {
+    width: 90%;
+  }
+}
