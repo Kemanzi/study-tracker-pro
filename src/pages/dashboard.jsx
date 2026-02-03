@@ -190,7 +190,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-page">
-            <h1>Dashboard</h1>
+            <h2>Dashboard</h2>
             {/* Study Calendar */}
             <div className="study-calendar">
                 <div className="calendar-header-bar">
