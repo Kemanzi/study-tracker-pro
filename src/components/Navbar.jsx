@@ -10,13 +10,16 @@ const Navbar = ({ onOpenSettings }) => {
                 <span className="logo-image">📓</span>
                 <span className="logo-text">My Study Tracker</span>
             </div>
+
             {/*Center: Navigation*/}
-            <ul className="navbar-center">
+            <ul className="navbar-center" >
                 <Link to="/" className={location.pathname === "/" ? "active" : ""}>Home</Link>
                 <Link to="/dashboard" className={location.pathname === "/dashboard" ? "active" : ""}>Dashboard</Link>
                 <Link to="/sessions" className={location.pathname === "/sessions" ? "active" : ""}>My Sessions</Link>
                 <Link to="/create" className={location.pathname === "/create" ? "active" : ""}>Create</Link>
             </ul>
+
+
 
             {/*Right: Settings*/}
             <button
