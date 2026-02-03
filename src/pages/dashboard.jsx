@@ -76,6 +76,10 @@ const Dashboard = () => {
             const minutes = Number.parseInt(session.minutes) || 0;
             const key = getDateKey(sessionDate);
 
+            if (key === todayKey) {
+                todayTotal += minutes;
+            }
+
             if (sessionDate >= startOfWeek && sessionDate < endOfWeek) {
                 weeklyTotal += minutes;
 
@@ -313,7 +317,7 @@ const Dashboard = () => {
                 <h3>Minutes per Day</h3>
                 <div className="chart-container">
                     {chartData.map((minutes, i) => (
-                        <div key={i} className="chart-bar" style={{ height: `${minutes}px` }}>
+                        <div key={i} className="chart-bar" style={{ height: `${(minutes / weeklyMinutes) * 100}px` }}>
                             <span>{minutes}</span>
                         </div>
                     ))}
